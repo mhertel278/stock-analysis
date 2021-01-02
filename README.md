@@ -11,7 +11,7 @@ To analyze the performance of the stocks, I wrote a VBA script that will take th
 
 While stock DQ had the largest increase in stock price in 2017 of the twelve stocks analyzed with a growth of 199.4%, it had the largest price decrease in 2018 falling by 62.6%
 
-![2017original](/resources/Not_refactored_2017.png)
+![2017original](/Resources/Not_refactored_2017.png)
 
 ![2018original](/resources/Not_refactored_2018.png)
 

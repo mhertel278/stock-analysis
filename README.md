@@ -50,18 +50,31 @@ This structure results in the script examining the entire data set only one time
 ![2018refactor](/resources/VBA_Challenge_2018.png)
 ## Summary
 
-
-
-
-
 ### Advantages
 
+Refactoring code after the initial scripting process can greatly improve the code's performance.  The refactoring process allows the opportunity to simplify or streamline the logic behind the code as well as remove any unecessary steps that may have been there while experimenting in the initial coding process; both of which can decrease the run time for a given script.  Additionally, there is an opportunity to add logic that will make the script more flexible.  For instance, variables can be assigned where values may have initially been hard coded.
+
+In the refactored version of the script used in this project, the run time was reduced by about 85%.  
+
+
 ### Disadvantages
-![OriginalOuter](/resources/Original_outer_loop.png)
+
+Refactoring code after a working version has been established does present a new opportunity for bugs and errors.  Changes to the overall logic used may require slight edits to the logic or structure of several lines of code.  Each edit required is an opportunity to make an error.  Additionally, new code blocks may be needed to offset lost functions from the original version being streamlined.  Having to write new code again gives the opportunity faulty logic or typing errors to result in bugs.
+
+In the scripts for this project, the If Then statements used to determine the first and last rows of a given ticker had to be slightly adjusted as different variables were used to accomodate the different loop structures, as can be seen below first in the original script followed by the refactored:
+
 ![OriginalNested](/resources/Original_nested_loop.png)
+
 ![RefactoredLoop](/resources/Refactored_loop.png)
 
+Each edit was a chance to make a mistake.
+
+Additionally, the original version outer loop finished by recording the total value and Starting and Ending Prices to the output table before looping back over the next ticker.  
+
 ![OriginalOutputs](/resources/Original_outputs.png)
-![OutputArrays](/resources/Output_arrays.png)
+
+In the refactored version, after completing the loop over the entire data set, a new For loop was necessary to take the valuse stored in each of the out put arrays and use the to populate the output table:
+
 ![OutputArraysLoop](/resources/Output_arrays_loop.png)
 
+Having to write all new code again gave opportunity for error.  

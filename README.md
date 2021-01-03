@@ -15,15 +15,15 @@ While stock DQ had the largest increase in stock price in 2017 of the twelve sto
 
 ![2018original](/Resources/Not_refactored_2018.png)
 
-In 2017, all but one stock increased in price through the year-most very significantly, while in 2018 all but two dropped in price.  This general downward trend indicates overall volatility in the market, not a drop in quality of DQ specifically.  For some savvy traders who can monitor trends closely, DQ may still have potential.  However for the average person like Steve's parents, choosing the least volatile stocks with steady growth is a more secure option.  Therefore, Steve's parent should look to invest in ENPH and RUN, as they were the only stocks to grow in price both years.  They may also want to include a stock like AY in their portfolio.  It had was among the smallest growing stocks in 2017, and while it did decrease price in 2018, its drop was among the smallest.  So while the opportunity for large gains are not there, the steadiness of the stock performance makes it a safer option than others.
+In 2017, all but one stock increased in price through the year--most very significantly, while in 2018 all but two dropped in price.  This general downward trend indicates overall volatility in the market, not necessarily a drop in quality of DQ specifically.  For some savvy traders who can monitor trends closely, DQ may still have potential.  However for the average person like Steve's parents, choosing the least volatile stocks with steady growth is a more secure option.  Therefore, Steve's parent should look to invest in ENPH and RUN, as they were the only stocks to grow in price both years.  They may also want to include a stock like AY in their portfolio.  It was among the smallest growing stocks in 2017, and while it did decrease price in 2018, its drop was also among the smallest.  So while this stock does not present opportunity for large gains, the steadiness of the stock performance makes it a safer option than others.
 
-### Methods of Scripting and Inproving Script performance Through Refactoring
+### Methods of Scripting and Improving Script Performance Through Refactoring
 
 In order to analyze and summarize the large data tables for each year, the initial VBA script created an array conaining each of the twelve stock tickers, then looped over that array to analyze the full data set for each ticker one by one.
 
 ![OriginalOuter](/Resources/Original_outer_loop.png)
 
-I then used a nested loop with that first loop.
+I then used the loop below nested within that first loop.
 
 ![OriginalNested](/Resources/Original_nested_loop.png)
 
@@ -61,9 +61,11 @@ In the refactored version of the script used in this project, the run time was r
 
 Refactoring code after a working version has been established does present a new opportunity for bugs and errors.  Changes to the overall logic used may require slight edits to the logic or structure of several lines of code.  Each edit required is an opportunity to make an error.  Additionally, new code blocks may be needed to offset lost functions from the original version being streamlined.  Having to write new code again gives the opportunity faulty logic or typing errors to result in bugs.
 
-In the scripts for this project, the If Then statements used to determine the first and last rows of a given ticker had to be slightly adjusted as different variables were used to accomodate the different loop structures, as can be seen below first in the original script followed by the refactored:
+In the scripts for this project, the If Then statements used to determine the first and last rows of a given ticker had to be slightly adjusted as different variables were used to accomodate the different loop structures, as can be seen below first in the original script: 
 
 ![OriginalNested](/Resources/Original_nested_loop.png)
+
+followed by the refactored:
 
 ![RefactoredLoop](/Resources/Refactored_loop.png)
 
